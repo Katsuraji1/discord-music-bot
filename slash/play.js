@@ -27,9 +27,6 @@ module.exports = {
 				)
 		),
 	run: async ({ client, interaction }) => {
-        if(interaction.member.displayName === 'Katsuraji'){
-            interaction.editReply(`Interaction :${JSON.stringify(interaction.user)} \n Client: ${JSON.stringify(interaction.member.voice)}`)
-        }
 		if (!interaction.member.voice.channel) return interaction.editReply(`You need to be in a VC to use this command, sosi ${interaction.member}`)
         if(interaction.member === '@Katsuraji') return interaction.editReply('Sosi') 
 		const queue = await client.player.createQueue(interaction.guild)
